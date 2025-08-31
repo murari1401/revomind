@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevoMind - AI Innovation Hub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <h1>RevoMind</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#explore" class="nav-link">Explore</a>
+                <a href="#trending" class="nav-link">Trending</a>
+                <a href="#feedback" class="nav-link">Feedback</a>
+                <button class="premium-btn">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Transform Ideas Into Reality</h1>
+                <p>AI-Powered Innovation Platform for Creators</p>
+
+                <div class="input-container">
+                    <input type="text" id="ideaInput"
+                           placeholder="Describe your innovative idea...">
+                    <div class="button-group">
+                        <button id="generateIdeasBtn" class="action-btn">
+                            <i class="fas fa-lightbulb"></i>
+                            Generate Ideas
+                        </button>
+                        <button id="generateImageBtn" class="action-btn">
+                            <i class="fas fa-image"></i>
+                            Visualize
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="results hidden">
+            <div class="suggestions">
+                <h2>Project Ideas</h2>
+                <div id="suggestionsContainer"></div>
+            </div>
+            <div class="preview">
+                <h2>Visual Preview</h2>
+                <div id="imagePreview"></div>
+            </div>
+        </section>
+
+        <!-- Trending Section -->
+        <section id="trending" class="trending">
+            <h2>Trending Projects</h2>
+            <div class="trending-grid"></div>
+        </section>
+    </main>
+
+    <!-- Loading Indicator (starts hidden) -->
+    <div id="loadingOverlay" class="loading hidden">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p id="loadingMessage">Processing your request...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/ui.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/animations.js"></script>
+</body>
+</html>
